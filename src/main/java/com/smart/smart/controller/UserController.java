@@ -37,5 +37,4 @@ public class UserController {
         user.setPassword(password);
         return userRepository.saveAndFlush(user);
     }
-
 }

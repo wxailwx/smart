@@ -6,9 +6,11 @@ import io.swagger.annotations.ApiModelProperty;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @ApiModel("用户实体")
 @Entity
+@Table(name = "user")
 public class User {
 
     @ApiModelProperty("用户姓名")
@@ -17,7 +19,7 @@ public class User {
     private String college;
     @ApiModelProperty("密码")
     private String password;
-    @ApiModelProperty("学号 id")
+    @ApiModelProperty(name = "学号 id")
     @Id
     private String number;
 
